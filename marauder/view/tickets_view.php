@@ -40,6 +40,8 @@
       </tbody>
     </table>
 
+    <p>Ticket(s) in basket: <?= $numberOfTickets ?></p> 
+
 
     </body>
     <footer>
