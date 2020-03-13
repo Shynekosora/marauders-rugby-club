@@ -34,6 +34,8 @@
       </tbody>
     </table>
 
+    <p>Ticket(s) in basket: <?= $numberOfTickets ?></p> 
+
     </body>
     <footer>
     <p>Thank you for your purchase.</p>
