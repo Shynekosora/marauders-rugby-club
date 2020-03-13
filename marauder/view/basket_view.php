@@ -33,8 +33,13 @@
         <?php endforeach ?>
       </tbody>
     </table>
-
+    
     <p>Ticket(s) in basket: <?= $numberOfTickets ?></p> 
+    <form action="basketlist.php" method="GET">
+      <input type="hidden" name="clearBasket">
+      <input name="ClearButton" type="submit" value="Clear basket">
+    </form>
+
 
     </body>
     <footer>
