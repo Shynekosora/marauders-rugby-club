@@ -17,6 +17,7 @@ if (isset($_REQUEST["ticketId"]))
 }
 
 $allTickets = getAllTickets();
+$numberOfTickets = sizeof($_SESSION["myBaskets"]);
 
 require_once("../view/tickets_view.php");
 ?>
