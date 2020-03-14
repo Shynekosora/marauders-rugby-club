@@ -6,9 +6,9 @@
         <center><h1><b>Basket</b></h1></center>
     </head>
     <boby>
-      <center><input type="button" onclick="window.location.href = 'home.php';" value="Home"/>
-      <input type="button" onclick="window.location.href = 'ticketlist.php';" value="Tickets"/>
-      <input type="button" onclick="window.location.href = 'basketlist.php';" value="Basket"/></center>
+      <center><input type="button" onclick="window.location.href = '../controller/home.php';" value="Home"/>
+      <input type="button" onclick="window.location.href = '../controller/ticketlist.php';" value="Tickets"/>
+      <input type="button" onclick="window.location.href = '../controller/basketlist.php';" value="Basket"/></center>
 
 
     <center><p>This is the basket page, where you can see what tickets you added to your purchase list.</p></center>
