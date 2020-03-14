@@ -4,6 +4,7 @@
     <head>
         <title>Tickets</title>
         <center><h1><b>Tickets</b></h1></center>
+        <link rel="stylesheet" href="../style/border.css">
     </head>
     <boby>
     <center><input type="button" onclick="window.location.href = '../controller/home.php';" value="Home"/>
@@ -13,13 +14,14 @@
 
     <center><p>This is the ticket page where you can add and purchase tickets to the games in your basket.</p></center>
 
-    <table>
+    <table id="ticketTable">
       <thead>
         <tr>
           <th>Opponent</th>
           <th>Match Type</th>
           <th>Seating</th>
           <th>Date</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
