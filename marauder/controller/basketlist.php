@@ -9,6 +9,16 @@ if (!isset($_SESSION["myBaskets"]))
   $_SESSION["myBaskets"] = [];
 }
 
+if (isset($_REQUEST["removeTicketId"]))
+{
+	$removeTicketId = $_REQUEST["removeTicketId"];
+	$ticketById = getTicketByTicketNumber($removeTicketId);
+	if (($key = array_search($ticketById, $_SESSION["myBaskets"])) !== false)
+	{
+		unset($_SESSION["myBaskets"][$key]);
+	}
+}
+
 $ticketInBasket = $_SESSION["myBaskets"];
 $numberOfTickets = sizeof($ticketInBasket);
 

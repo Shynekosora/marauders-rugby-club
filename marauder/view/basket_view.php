@@ -21,6 +21,7 @@
           <th>Match Type</th>
           <th>Seating</th>
           <th>Date</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -30,6 +31,12 @@
           <td><?=$ticket->matchType ?></td>
           <td><?=$ticket->seating ?></td>
           <td><?=$ticket->date ?></td>
+          <td>
+            <form action="basketlist.php" method="GET">
+              <input type="hidden" value="<?= $ticket->ticketNumber ?>" name="removeTicketId"/>
+              <input name="removeButton" type="submit" value="X">
+            </form>
+          </td>
         </tr>
         <?php endforeach ?>
       </tbody>

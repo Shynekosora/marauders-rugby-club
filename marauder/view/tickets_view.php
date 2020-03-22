@@ -34,7 +34,7 @@
           <td>
             <form action="ticketlist.php" method="GET">
               <input type="hidden" value="<?= $ticket->ticketNumber ?>" name="ticketId"/>
-              <input name="AddButton" type="submit" value="Add ticket">
+              <input name="addButton" type="submit" value="Add ticket">
             </form>
           </td>
         </tr>
