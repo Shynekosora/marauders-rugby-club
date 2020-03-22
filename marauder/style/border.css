@@ -1,0 +1,19 @@
+#ticketTable {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+}
+
+#ticketTable {
+	border: 1px solid black;
+	padding: 8px;
+}
+
+#ticketTable th { 
+	background-color: blue;
+	color: white;
+}
+
+#ticketTable tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
