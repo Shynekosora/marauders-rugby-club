@@ -6,6 +6,7 @@ class Ticket {
   private $seating;
   private $date;
   private $addToBasket;
+  private $price;
 
   function __get($ticket) {
     return $this->$ticket;
