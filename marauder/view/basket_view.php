@@ -11,7 +11,6 @@
       <input type="button" onclick="window.location.href = '../controller/ticketlist.php';" value="Tickets"/>
       <input type="button" onclick="window.location.href = '../controller/basketlist.php';" value="Basket"/></center>
 
-
     <center><p>This is the basket page, where you can see what tickets you added to your purchase list.</p></center>
 
 <table id="ticketTable">
