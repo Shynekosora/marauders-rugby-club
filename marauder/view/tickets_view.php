@@ -21,6 +21,7 @@
           <th>Match Type</th>
           <th>Seating</th>
           <th>Date</th>
+          <th>Price</th>
           <th></th>
         </tr>
       </thead>
@@ -31,6 +32,7 @@
           <td><?=$ticket->matchType ?></td>
           <td><?=$ticket->seating ?></td>
           <td><?=$ticket->date ?></td>
+          <td><?=$ticket->price ?></td>
           <td>
             <form action="ticketlist.php" method="GET">
               <input type="hidden" value="<?= $ticket->ticketNumber ?>" name="ticketId"/>
