@@ -21,6 +21,12 @@ if (isset($_REQUEST["removeTicketId"]))
 
 $ticketInBasket = $_SESSION["myBaskets"];
 $numberOfTickets = sizeof($ticketInBasket);
+$totalPrice = 0;
+foreach ($ticketInBasket as $ticket) {
+	$price = $ticket->price;
+	$totalPrice += $price;
+}
+
 
 function clearAllTicketsInBasket() {
     session_unset("myBaskets");

@@ -43,6 +43,8 @@
         <?php endforeach ?>
       </tbody>
     </table>
+
+    <p>Total price: <?= $totalPrice ?></p>
     
     <p>Ticket(s) in basket: <?= $numberOfTickets ?></p> 
     <form action="basketlist.php" method="GET">
