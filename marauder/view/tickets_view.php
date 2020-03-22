@@ -42,8 +42,22 @@
       </tbody>
     </table>
 
-    <p>Ticket(s) in basket: <?= $numberOfTickets ?></p> 
+    <form action="ticketlist.php" method="GET">
+      <label for="ticketFilter">Filter ticket by: </label>
+      <select id="ticketFilter" name="filterValue">
+        <option value="all">All tickets</option>
+        <option value="opponent">Opponent</option>
+        <option value="matchType">Match Type</option>
+        <option value="seating">Seating</option>
+        <option value="date">Date</option>
+      </select>
+      <br>
+      <label for="searchValue">Search: </label>
+      <input type="text" name="searchValue">
+      <input type="submit">
+    </form> 
 
+    <p>Ticket(s) in basket: <?= $numberOfTickets ?></p> 
 
     </body>
     <footer>
