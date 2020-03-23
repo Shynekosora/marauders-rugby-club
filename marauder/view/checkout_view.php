@@ -56,7 +56,7 @@
   		<input type="email" id="email" name="email" placeholder="john-smith@example.com" required><br>
 
   		<label for="contactNumber">Contact Number: </label>
-  		<input type="text" id="contactNumber" name="contactNumber" placeholder="02837482736" required><br>
+  		<input type="tel" id="contactNumber" name="contactNumber" placeholder="02837482736" required><br>
 
   		<input type="submit" value="Submit">
 	</form> 
