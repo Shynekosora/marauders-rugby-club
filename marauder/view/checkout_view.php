@@ -41,22 +41,22 @@
 
     <form action="../controller/purchased.php" method="POST">
   		<label for="firstName">First name: </label>
-  		<input type="text" id="firstName" name="firstName" placeholder="John"><br>
+  		<input type="text" id="firstName" name="firstName" placeholder="John" required><br>
 
   		<label for="lastName">Last name: </label>
-  		<input type="text" id="lastName" name="lastName" placeholder="Smith"><br>
+  		<input type="text" id="lastName" name="lastName" placeholder="Smith" required><br>
 
   		<label for="addressLineOne">Address Line 1: </label>
-  		<input type="text" id="addressLineOne" name="addressLineOne" placeholder="10 Harlow Rd"><br>
+  		<input type="text" id="addressLineOne" name="addressLineOne" placeholder="10 Harlow Rd" required><br>
 
   		<label for="addressLineTwo">Address Line 2: </label>
-  		<input type="text" id="addressLineTwo" name="addressLineTwo" placeholder="London"><br>
+  		<input type="text" id="addressLineTwo" name="addressLineTwo" placeholder="London" required><br>
 
   		<label for="email">Email: </label>
-  		<input type="email" id="email" name="email" placeholder="test@google.com"><br>
+  		<input type="email" id="email" name="email" placeholder="john-smith@example.com" required><br>
 
   		<label for="contactNumber">Contact Number: </label>
-  		<input type="text" id="contactNumber" name="contactNumber" placeholder="02837482736"><br>
+  		<input type="text" id="contactNumber" name="contactNumber" placeholder="02837482736" required><br>
 
   		<input type="submit" value="Submit">
 	</form> 
