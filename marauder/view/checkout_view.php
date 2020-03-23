@@ -11,7 +11,7 @@
       <input type="button" onclick="window.location.href = '../controller/ticketlist.php';" value="Tickets"/>
       <input type="button" onclick="window.location.href = '../controller/basketlist.php';" value="Basket"/></center>
 
-    <form>
+    <form action="../controller/purchased.php" method="POST">
   		<label for="firstName">First name: </label>
   		<input type="text" id="firstName" name="firstName" placeholder="John"><br>
 
