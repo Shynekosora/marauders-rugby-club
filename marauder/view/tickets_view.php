@@ -32,7 +32,7 @@
           <td><?=$ticket->matchType ?></td>
           <td><?=$ticket->seating ?></td>
           <td><?=$ticket->date ?></td>
-          <td><?=$ticket->price ?></td>
+          <td>£<?=$ticket->price ?></td>
           <td>
             <form action="ticketlist.php" method="GET">
               <input type="hidden" value="<?= $ticket->ticketNumber ?>" name="ticketId"/>

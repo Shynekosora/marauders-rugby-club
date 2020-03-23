@@ -6,5 +6,18 @@ require_once("../model/customers.php");
 
 session_start();
 
+if (!isset($_SESSION["myBaskets"]))
+{
+  $_SESSION["myBaskets"] = [];
+}
+
+$ticketInBasket = $_SESSION["myBaskets"];
+$numberOfTickets = sizeof($ticketInBasket);
+$totalPrice = 0;
+foreach ($ticketInBasket as $ticket) {
+	$price = $ticket->price;
+	$totalPrice += $price;
+}
+
 require_once("../view/checkout_view.php");
 ?>

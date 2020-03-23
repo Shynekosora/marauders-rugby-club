@@ -31,7 +31,7 @@
           <td><?=$ticket->matchType ?></td>
           <td><?=$ticket->seating ?></td>
           <td><?=$ticket->date ?></td>
-          <td><?=$ticket->price ?></td>
+          <td>£<?=$ticket->price ?></td>
           <td>
             <form action="basketlist.php" method="GET">
               <input type="hidden" value="<?= $ticket->ticketNumber ?>" name="removeTicketId"/>
@@ -43,7 +43,7 @@
       </tbody>
     </table>
 
-    <p>Total price: <?= $totalPrice ?></p>
+    <p>Total price: £<?= $totalPrice ?></p>
     
     <p>Ticket(s) in basket: <?= $numberOfTickets ?></p> 
     <form action="../controller/checkout.php" method="POST">
