@@ -11,7 +11,6 @@
       <input type="button" onclick="window.location.href = '../controller/ticketlist.php';" value="Tickets"/>
       <input type="button" onclick="window.location.href = '../controller/basketlist.php';" value="Basket"/></center>
 
-
     <center><p>This is the basket page, where you can see what tickets you added to your purchase list.</p></center>
 
 <table id="ticketTable">
@@ -47,6 +46,9 @@
     <p>Total price: <?= $totalPrice ?></p>
     
     <p>Ticket(s) in basket: <?= $numberOfTickets ?></p> 
+    <form action="../controller/checkout.php" method="POST">
+      <input name="CheckoutButton" type="submit" value="Checkout">
+    </form>
     <form action="basketlist.php" method="GET">
       <input type="hidden" name="clearBasket">
       <input name="ClearButton" type="submit" value="Clear basket">
@@ -55,6 +57,5 @@
 
     </body>
     <footer>
-    <p>Thank you for your purchase.</p>
     </footer>
 </html>

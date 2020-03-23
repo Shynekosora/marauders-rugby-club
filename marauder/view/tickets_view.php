@@ -63,6 +63,5 @@
 
     </body>
     <footer>
-    <p>Thank you for your purchase.</p>
     </footer>
 </html>
