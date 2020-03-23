@@ -65,4 +65,13 @@ function getTicketByTicketNumber($ticketNumberToSearchFor)
   $result = $statement->fetchObject('Ticket');
   return $result;
 }
+
+function getAdminByAdminUserName($adminUserNameToSearchFor)
+{
+  global $pdo;
+  $statement = $pdo->prepare('SELECT adminID,adminRealName,adminUserName,adminPassword FROM admin WHERE adminUserName = ?');
+  $statement->execute([$adminUserNameToSearchFor]);
+  $result = $statement->fetchAll(PDO::FETCH_CLASS, 'Admin');
+  return $result;
+}
 ?>

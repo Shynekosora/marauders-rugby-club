@@ -9,7 +9,8 @@
     <boby>
       <center><input type="button" onclick="window.location.href = '../controller/home.php';" value="Home"/>
       <input type="button" onclick="window.location.href = '../controller/ticketlist.php';" value="Tickets"/>
-      <input type="button" onclick="window.location.href = '../controller/basketlist.php';" value="Basket"/></center>
+      <input type="button" onclick="window.location.href = '../controller/basketlist.php';" value="Basket"/>
+      <input type="button" onclick="window.location.href = '../controller/admin.php';" value="Admin login"/></center>
 
     <p>Thank you for your purchase, your orders has been placed</p>
     </body>
