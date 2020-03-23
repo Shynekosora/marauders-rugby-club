@@ -49,6 +49,7 @@
     <form action="../controller/checkout.php" method="POST">
       <input name="CheckoutButton" type="submit" value="Checkout">
     </form>
+    <br>
     <form action="basketlist.php" method="GET">
       <input type="hidden" name="clearBasket">
       <input name="ClearButton" type="submit" value="Clear basket">
