@@ -46,6 +46,9 @@
     <p>Total price: <?= $totalPrice ?></p>
     
     <p>Ticket(s) in basket: <?= $numberOfTickets ?></p> 
+    <form action="../controller/checkout.php" method="POST">
+      <input name="CheckoutButton" type="submit" value="Checkout">
+    </form>
     <form action="basketlist.php" method="GET">
       <input type="hidden" name="clearBasket">
       <input name="ClearButton" type="submit" value="Clear basket">
@@ -54,6 +57,5 @@
 
     </body>
     <footer>
-    <p>Thank you for your purchase.</p>
     </footer>
 </html>
