@@ -81,4 +81,11 @@ function insertCustomersData($firstName, $sureName, $addressLineOne, $addressLin
   $statement = $pdo->prepare('INSERT INTO customers (firstName, sureName, addressLineOne, addressLineTwo, email, contactNumber, purchaseID) VALUES (?, ?, ?, ?, ?, ?, ?)');
   $statement->execute([$firstName, $sureName, $addressLineOne, $addressLineTwo, $email, $contactNumber, $purchaseID]);
 }
+
+function insertTicketData($opponent, $matchType, $seating, $date, $addToBasket, $price)
+{
+  global $pdo;
+  $statement = $pdo->prepare('INSERT INTO tickets (opponent, matchType, seating, date, addToBasket, price) VALUES (?, ?, ?, ?, ?, ?)');
+  $statement->execute([$opponent, $matchType, $seating, $date, $addToBasket, $price]);
+}
 ?>
