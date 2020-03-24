@@ -40,7 +40,7 @@
     
     <p>Ticket(s) in basket: <?= $numberOfTickets ?></p> 
 
-    <form action="../controller/purchased.php" method="POST">
+    <form action="../controller/checkout.php" method="POST">
   		<label for="firstName">First name: </label>
   		<input type="text" id="firstName" name="firstName" placeholder="John" required><br>
 
@@ -59,7 +59,7 @@
   		<label for="contactNumber">Contact Number: </label>
   		<input type="tel" id="contactNumber" name="contactNumber" placeholder="02837482736" required><br>
 
-  		<input type="submit" value="Submit">
+  		<input type="submit" name="checkoutSubmit"value="Submit">
 	</form> 
 
     </body>

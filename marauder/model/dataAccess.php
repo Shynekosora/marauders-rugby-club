@@ -74,4 +74,11 @@ function getAdminByAdminUserName($adminUserNameToSearchFor)
   $result = $statement->fetchAll(PDO::FETCH_CLASS, 'Admin');
   return $result;
 }
+
+function insertCustomersData($firstName, $sureName, $addressLineOne, $addressLineTwo, $email, $contactNumber, $purchaseID)
+{
+  global $pdo;
+  $statement = $pdo->prepare('INSERT INTO customers (firstName, sureName, addressLineOne, addressLineTwo, email, contactNumber, purchaseID) VALUES (?, ?, ?, ?, ?, ?, ?)');
+  $statement->execute([$firstName, $sureName, $addressLineOne, $addressLineTwo, $email, $contactNumber, $purchaseID]);
+}
 ?>

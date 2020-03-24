@@ -19,5 +19,19 @@ foreach ($ticketInBasket as $ticket) {
 	$totalPrice += $price;
 }
 
+if (isset($_POST["checkoutSubmit"]))
+{
+	$firstName = $_POST["firstName"];
+	$lastName = $_POST["lastName"];
+	$addressLineOne = $_POST["addressLineOne"];
+	$addressLineTwo = $_POST["addressLineTwo"];
+	$email = $_POST["email"];
+	$contactNumber = $_POST["contactNumber"];
+	$purchaseID = rand(1,10000);
+
+	insertCustomersData($firstName, $lastName, $addressLineOne, $addressLineTwo, $email, $contactNumber, $purchaseID);
+	header('Location: purchased.php');
+}
+
 require_once("../view/checkout_view.php");
 ?>
