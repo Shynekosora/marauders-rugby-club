@@ -65,4 +65,20 @@ function getTicketByTicketNumber($ticketNumberToSearchFor)
   $result = $statement->fetchObject('Ticket');
   return $result;
 }
+
+function getAdminByAdminUserName($adminUserNameToSearchFor)
+{
+  global $pdo;
+  $statement = $pdo->prepare('SELECT adminID,adminRealName,adminUserName,adminPassword FROM admin WHERE adminUserName = ?');
+  $statement->execute([$adminUserNameToSearchFor]);
+  $result = $statement->fetchAll(PDO::FETCH_CLASS, 'Admin');
+  return $result;
+}
+
+function insertCustomersData($firstName, $sureName, $addressLineOne, $addressLineTwo, $email, $contactNumber, $purchaseID)
+{
+  global $pdo;
+  $statement = $pdo->prepare('INSERT INTO customers (firstName, sureName, addressLineOne, addressLineTwo, email, contactNumber, purchaseID) VALUES (?, ?, ?, ?, ?, ?, ?)');
+  $statement->execute([$firstName, $sureName, $addressLineOne, $addressLineTwo, $email, $contactNumber, $purchaseID]);
+}
 ?>

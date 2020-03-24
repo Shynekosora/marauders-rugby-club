@@ -9,7 +9,8 @@
     <boby>
       <center><input type="button" onclick="window.location.href = '../controller/home.php';" value="Home"/>
       <input type="button" onclick="window.location.href = '../controller/ticketlist.php';" value="Tickets"/>
-      <input type="button" onclick="window.location.href = '../controller/basketlist.php';" value="Basket"/></center>
+      <input type="button" onclick="window.location.href = '../controller/basketlist.php';" value="Basket"/>
+      <input type="button" onclick="window.location.href = '../controller/admin.php';" value="Admin login"/></center>
 
     <center><p>This is the basket page, where you can see what tickets you added to your purchase list.</p></center>
 
@@ -31,7 +32,7 @@
           <td><?=$ticket->matchType ?></td>
           <td><?=$ticket->seating ?></td>
           <td><?=$ticket->date ?></td>
-          <td><?=$ticket->price ?></td>
+          <td>£<?=$ticket->price ?></td>
           <td>
             <form action="basketlist.php" method="GET">
               <input type="hidden" value="<?= $ticket->ticketNumber ?>" name="removeTicketId"/>
@@ -43,12 +44,13 @@
       </tbody>
     </table>
 
-    <p>Total price: <?= $totalPrice ?></p>
+    <p>Total price: £<?= $totalPrice ?></p>
     
     <p>Ticket(s) in basket: <?= $numberOfTickets ?></p> 
     <form action="../controller/checkout.php" method="POST">
       <input name="CheckoutButton" type="submit" value="Checkout">
     </form>
+    <br>
     <form action="basketlist.php" method="GET">
       <input type="hidden" name="clearBasket">
       <input name="ClearButton" type="submit" value="Clear basket">

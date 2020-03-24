@@ -9,7 +9,8 @@
     <boby>
     <center><input type="button" onclick="window.location.href = '../controller/home.php';" value="Home"/>
     <input type="button" onclick="window.location.href = '../controller/ticketlist.php';" value="Tickets"/>
-    <input type="button" onclick="window.location.href = '../controller/basketlist.php';" value="Basket"/></center>
+    <input type="button" onclick="window.location.href = '../controller/basketlist.php';" value="Basket"/>
+    <input type="button" onclick="window.location.href = '../controller/admin.php';" value="Admin login"/></center>
 
 
     <center><p>This is the ticket page where you can add and purchase tickets to the games in your basket.</p></center>
@@ -32,7 +33,7 @@
           <td><?=$ticket->matchType ?></td>
           <td><?=$ticket->seating ?></td>
           <td><?=$ticket->date ?></td>
-          <td><?=$ticket->price ?></td>
+          <td>£<?=$ticket->price ?></td>
           <td>
             <form action="ticketlist.php" method="GET">
               <input type="hidden" value="<?= $ticket->ticketNumber ?>" name="ticketId"/>
